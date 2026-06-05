@@ -1,0 +1,15 @@
+{
+  "name": "qr-codes-plovdiv",
+  "version": "1.0.0",
+  "description": "QR Codes scatter across Plovdiv!",
+  "license": "MIT",
+  "author": "Georgi Murlev",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
