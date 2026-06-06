@@ -4,9 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code {{id}}</title>
+    <title>{{title}} — QR Codes Plovdiv</title>
+    <meta name="description" content="{{description}}" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="/{{id}}" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:description" content="{{description}}" />
+    <meta property="og:url" content="/{{id}}" />
+    <meta property="og:image" content="{{image}}" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{title}}" />
+    <meta name="twitter:description" content="{{description}}" />
+
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/app.js" defer></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "{{title}}",
+      "url": "/{{id}}",
+      "description": "{{description}}",
+      "mainEntity": {
+        "@type": "CreativeWork",
+        "headline": "{{title}}",
+        "about": "QR code content for {{location}}"
+      }
+    }
+    </script>
+    
 </head>
 
 <body>
@@ -21,6 +53,9 @@
                 <p><strong>Description:</strong> {{description}}</p>
                 <p><strong>Location:</strong> {{location}}</p>
                 <p><strong>Status:</strong> {{status}}</p>
+            </section>
+            <section class="share">
+                <p>Share this link: <a href="/{{id}}">/{{id}}</a></p>
             </section>
         </main>
 
