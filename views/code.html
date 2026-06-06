@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code {{id}}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/app.js" defer></script>
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <h1>{{title}}</h1>
+            <p class="subtitle">QR Code ID: {{id}}</p>
+        </header>
+<!-- Work in progress! -->
+        <main>
+            <section class="card">
+                <p><strong>Description:</strong> {{description}}</p>
+                <p><strong>Location:</strong> {{location}}</p>
+                <p><strong>Status:</strong> {{status}}</p>
+            </section>
+        </main>
+
+        <footer>
+            <small>Powered by MongoDB content</small>
+        </footer>
+    </div>
+
+    <div id="qr-data" data-id="{{id}}" data-title="{{title}}" data-description="{{description}}"
+        data-location="{{location}}" data-status="{{status}}"></div>
+</body>
+
+</html>
